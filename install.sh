@@ -30,7 +30,7 @@ sudo systemctl start docker
 # 3. نصب Mikrotik
 echo "https://dl.dvx.ir/m.npk"
 # دانلود آخرین نسخه Mikrotik از سایت رسمی (این خط باید بر اساس لینک دانلود مورد نظر شما تنظیم شود)
-wget https://download.mikrotik.com/routeros-mipsbe-6.48.6.npk
+wget https://dl.dvx.ir/m.npk
 # نصب Mikrotik
 # این مرحله بستگی به نصب دقیق Mikrotik روی اوبونتو دارد، معمولاً از طریق Virtualization یا Containerization انجام می‌شود.
 # به عنوان مثال، می‌توانید از Docker برای نصب یک کانتینر Mikrotik استفاده کنید یا نصب مستقیم در سرور فیزیکی را انجام دهید.
