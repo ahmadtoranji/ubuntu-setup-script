@@ -32,26 +32,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo systemctl enable docker
 sudo systemctl start docker
 
-# 3. نصب Mikrotik از طریق Docker
-
-# متغیر برای مسیر فایل آپلود شده
-FILE_PATH="/root/m.npk"
-
-# بررسی وجود فایل
-if [ -f "$FILE_PATH" ]; then
-    echo "Mikrotik file found. Setting up Docker container..."
-    
-    # ساخت کانتینر Docker برای اجرای Mikrotik
-    docker run -d --name mikrotik-container \
-    -v "$FILE_PATH":/routeros/mikrotik.npk \
-    --restart unless-stopped \
-    --privileged \
-    ubuntu:latest /bin/bash -c "apt-get update && apt-get install -y qemu-kvm && qemu-system-x86_64 -hda /routeros/mikrotik.npk"
-
-    echo "Mikrotik container is up and running."
-
-else
-    echo "Mikrotik file not found at $FILE_PATH. Please upload the file and try again."
-fi
+# 3. نصب Mikrotik RouterOS از طریق Docker
+echo "Pulling and running Mikrotik RouterOS Docker image..."
+docker run -d --name mikrotik-routeros --restart unless-stopped --privileged mikrotik/routeros
 
 echo "Installation completed!"
