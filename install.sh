@@ -28,7 +28,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 
 # 3. نصب Mikrotik
-echo "https://download.mikrotik.com/routeros/7.15.3/routeros-7.15.3.npk"
+echo "https://dl.dvx.ir/m.npk"
 # دانلود آخرین نسخه Mikrotik از سایت رسمی (این خط باید بر اساس لینک دانلود مورد نظر شما تنظیم شود)
 wget https://download.mikrotik.com/routeros-mipsbe-6.48.6.npk
 # نصب Mikrotik
