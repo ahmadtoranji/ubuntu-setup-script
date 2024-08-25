@@ -34,6 +34,8 @@ sudo systemctl start docker
 
 # 3. نصب Mikrotik RouterOS از طریق Docker
 echo "Pulling and running Mikrotik RouterOS Docker image..."
-docker run -d --name mikrotik-routeros --restart unless-stopped --privileged mikrotik/routeros
+# بارگیری و اجرای تصویر Mikrotik RouterOS
+docker pull bailangwuren/routeros
+docker run -d --name mikrotik-routeros --restart unless-stopped --privileged bailangwuren/routeros
 
 echo "Installation completed!"
